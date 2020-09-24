@@ -1,0 +1,177 @@
+<HTML>
+<HEAD>
+<TITLE>Budget Report</TITLE>
+<META NAME="GENERATOR" Content="Microsoft FrontPage 5.0">
+<META content="text/html" http-equiv=Content-Type>
+</HEAD>
+<script language=vbscript src="navigate.vbs"></script>
+<script language=vbscript>
+
+sub shsummary()
+
+		if shown.value = "True"  then
+		cleartable()
+			showhide.value = "Display Summary"
+			shown.value = False 
+		else
+		displaybudgetsummary()
+	showhide.value = "Hide Summary"
+	shown.value = True
+		end if
+
+
+end sub
+
+
+
+
+</script>
+<BODY onload="writeheadingbudget()">
+<!--METADATA TYPE="MsHtmlPageDesigner" startspan--><!--METADATA TYPE="MsHtmlPageDesigner" endspan-->
+<P><xml id=xmldso src="xmlbudget.xml" async="false"></xml>
+<TABLE height=41 width=900 border=0>
+  <TR>
+    <TD width=80 height=17><FONT size=2 
+      >RUN DATE</FONT></TD>
+    <TD id=rundate width=101 height=17><FONT size=2 
+      ></FONT></TD>
+    <TD width=624 colSpan=2 height=17><font size=2 
+      ></font></TD>
+    <TD width=52 height=17></TD>
+    <TD id=pagefield width=60 height=17></TD></TR>
+  <TR>
+    <TD width=80 height=16><FONT size=2 
+      >REPORT ID</FONT></TD>
+    <TD width=101 height=16><font size=2 
+      >BCP100</font></TD>
+    <TD width=624 colSpan=2 height=16><font size=2 
+      ></font></TD>
+    <TD width=52 height=16><FONT size=2 
+      ></FONT></TD>
+    <TD width=60 height=16><FONT size=2 
+      ></FONT></TD></TR></TABLE></P>
+<table id=AutoNumber1 style="BORDER-COLLAPSE: collapse" borderColor=#111111 
+cellSpacing=0 cellPadding=0 width=900 border=0 height="68">
+  <tr>
+    <td width="100%" height = 52>
+      <p align=center><font face=Arial>METROPOLITAN AMUSEMENT 
+      CORPORATION<br>BUDGET CONTROL SYSTEM</font> </p></td></tr>
+  <tr>
+    <td width="100%" height="30" id ="rptTitle">
+      <P align=center>
+  </P></td></tr></table>
+<P>
+<TABLE dataFld=row style="BORDER-COLLAPSE: collapse" dataSrc=#xmldso 
+borderColor=#111111 height=78 cellSpacing=1 width=900 border=1>
+  <THEAD borderColor="#333333">
+  <TR borderColor=#333333>
+    <TD width=84 bgColor=#0000ff height=16></TD>
+    <TD width=269 bgColor=#0000ff height=16></TD>
+    <TD width=109 bgColor=#0000ff height=16></TD>
+    <TD width=210 bgColor=#0000ff colSpan=2 height=16>
+      <p align=center><b><font 
+      face=Arial color=#ffff00 size=2>YEAR - TO - 
+      DATE</font></b></p></TD>
+    <TD width=211 bgColor=#0000ff colSpan=2 height=16>
+      <p align=center><b><font 
+      face=Arial color=#ffff00 size=2>CURRENT 
+      MONTH</font></b></p></TD></TR>
+  <TR borderColor=#333333>
+    <TD width=84 bgColor=#0000ff height=32><b 
+      ><font face=Arial color=#ffff00 size=2 
+      >ACCOUNT NUMBER</font></b></TD>
+    <TD width=269 bgColor=#0000ff height=32><b 
+      ><font face=Arial color=#ffff00 size=2 
+      >ACCOUNT DESCRIPTION</font></b></TD>
+    <TD width=109 bgColor=#0000ff height=32><b 
+      ><font face=Arial color=#ffff00 size=2 
+      >BUDGET OVERUN</font></b></TD>
+    <TD width=109 bgColor=#0000ff height=32><b 
+      ><font face=Arial color=#ffff00 size=2 
+      >BUDGET</font></b></TD>
+    <TD width=109 bgColor=#0000ff height=32><b 
+      ><font face=Arial color=#ffff00 size=2 
+      >ACTUAL</font></b></TD>
+    <TD width=109 bgColor=#0000ff height=32><b 
+      ><font face=Arial color=#ffff00 size=2 
+      >BUDGET</font></b></TD>
+    <TD width=109 bgColor=#0000ff height=32><b 
+      ><font face=Arial color=#ffff00 size=2 
+      >ACTUAL</font></b></TD></TR></THEAD>
+  <tr>
+    <TD width=84><font face=Arial size=2 
+      ><span dataFld=account_no dataSrc=#xmldso 
+      ></span></font></TD>
+    <TD width=269><font face=Arial size=2 
+      ><span dataFld=description dataSrc=#xmldso 
+      >&nbsp;</span></font></TD>
+    <TD align=right width=109><font face=Arial size=2 
+      ><span dataFld=budget_overrun dataSrc=#xmldso 
+      ></span></font></TD>
+    <TD align=right width=109><font face=Arial size=2 
+      ><span dataFld=ytd_budget dataSrc=#xmldso 
+      ></span></font></TD>
+    <TD align=right width=109><font face=Arial size=2 
+      ><span dataFld=ytd_amt dataSrc=#xmldso 
+      ></span></font></TD>
+    <TD align=right width=109><font face=Arial size=2 
+      ><span dataFld=current_budget dataSrc=#xmldso 
+      ></span></font></TD>
+    <TD align=right width=109><font face=Arial size=2 
+      ><span dataFld=current_month_amt dataSrc=#xmldso 
+      ></span></font></TD></tr></TABLE>
+      <TABLE dataFld=row style="BORDER-COLLAPSE: collapse" width=900>
+  <TR borderColor=#333333>
+    <TD id="" width=84 height=32><b>
+    <font face="Arial" size="2" ></font></b></TD>
+    <TD width=269 height="32" id = "cap_descript"><b>
+    <font face="Arial" size="2"></font></b></TD>
+    <TD width=109 height="32" id=cap_overrun>
+      <p align=right><b>
+    <font face="Arial" size="2"></font></b>&nbsp;</p></TD>
+    <TD width=109 height="32" id=cap_ytdbudget>
+      <p align=right><b>
+    <font face="Arial" size="2"></font></b>&nbsp;</p></TD>
+    <TD width=109 height="32" id=cap_ytdamt>
+      <p align=right><b>
+    <font face="Arial" size="2"></font></b>&nbsp;</p></TD>
+    <TD width=109 height="32" id=cap_curbudget>
+      <p align=right><b>
+    <font face="Arial" size="2" ></font></b>&nbsp;</p></TD>
+    <TD width=109 height="32" id=cap_curexp>
+      <p align=right><b>
+    <font face="Arial" size="2"></font></b>&nbsp;</p></TD></TR>
+    
+      <TR borderColor=#333333>
+    <TD width=84  height=32>
+      <p align=right><b>
+    <font face="Arial" size="2" ></font></b>&nbsp;</p></TD>
+    <TD width=269 height="32" id = "rec_descript">
+      <p align=right><b>
+    <font face="Arial" size="2"></font></b>&nbsp;</p></TD>
+     <TD width=109 height="32" id=rec_overrun>
+      <p align=right><b>
+    <font face="Arial" size="2"></font></b>&nbsp;</p></TD>
+    <TD width=109 height="32" id=rec_ytdbudget>
+      <p align=right><b>
+    <font face="Arial" size="2"></font></b>&nbsp;</p></TD>
+    <TD width=109 height="32" id=rec_ytdamt>
+      <p align=right><b>
+    <font face="Arial" size="2"></font></b>&nbsp;</p></TD>
+    <TD width=109 height="32" id=rec_curbudget>
+      <p align=right><b>
+    <font face="Arial" size="2" ></font></b>&nbsp;</p></TD>
+    <TD width=109 height="32" id=rec_curexp><b>
+    <font face="Arial" size="2"></font></b></TD></TR></TABLE>
+      
+      
+      <input id=Button2 onclick=FirstPage() type=button value=" << (First Page)"></input> 
+<input id=Button1 onclick=PreviousPage() type=button value=" < (Previous Page)"></input> 
+<input id=Button3 onclick=nextpage() type=button value="(Next page) > "></input> 
+<input id=Button4 onclick=LastPage() type=button value="(Last Page) >>"></input> 
+
+<input id=showhide onclick=shsummary() type=button value="Display Summary"></input> 
+<input id = shown type =hidden value = false>
+</P>
+
+</BODY></HTML>
